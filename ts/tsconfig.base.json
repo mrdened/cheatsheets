@@ -1,0 +1,32 @@
+{
+    // "extends":"./tsconfig",                         // Интеграция другого конфига, затем дополняем/переопеределяем параметры в этом
+    "compilerOptions": {
+        /* Language and Environment */
+        "target": "ES2022",                            // В какой формат компилируем
+        "emitDecoratorMetadata": true,
+        "experimentalDecorators": true,             /* Enable experimental support for legacy experimental decorators. */
+        /* Modules */
+        "module": "NodeNext",                         // Какой режим импорта/эскпорта используем
+        "rootDir": "./src",                         /* Specify the root folder within your source files. */
+        "moduleResolution": "nodenext",                 /* Specify how TypeScript looks up a file from a given module specifier. */
+        "resolveJsonModule": true,                        /* Enable importing .json files. */
+        /* JavaScript Support */
+        "allowJs": true,                            // Компилятор будет обрабатывать не только ts файлы, но и JS
+        /* Emit */
+        "sourceMap": true,                          /* Create source map files for emitted JavaScript files. */
+        "outDir": "./build/",                       // Куда собираем
+        "noEmitOnError": true,                      /* Disable emitting files if any type checking errors are reported. */
+        /* Interop Constraints */
+        "isolatedModules": true,                    // Обязательное поле при ESBuild, выключает typescript-овые импорт <reference/>
+        "allowSyntheticDefaultImports": true,       /* Allow 'import x from y' when a module doesn't have a default export. */
+        "esModuleInterop": true,                    // Импорт CommonJS в соотвествии со спекой ES6 !== import * as component from module
+        "forceConsistentCasingInFileNames": true,   /* Ensure that casing is correct in imports. */
+        /* Type Checking */
+        "strict": true,                             // Строгий режим
+        /* Completeness */
+        "skipLibCheck": true                        /* Skip type checking all .d.ts files. */
+    },
+    // "exclude": ["./node_modules"],                  // Выключаем папки из компиляции
+    "include": ["./src/**/*"],                      // Компилируемые папки
+    // "files": ["./src/app.ts"],                      // Компилируем конкретные файлы
+}

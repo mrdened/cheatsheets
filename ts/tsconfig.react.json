@@ -1,0 +1,17 @@
+{
+    "extends":"./tsconfig.base",                    // Интеграция другого конфига, затем дополняем/переопеределяем параметры в этом
+    "compilerOptions": {
+        /* Language and Environment */
+        "target": "ES2015",                         // В какой формат компилируем
+        "lib": ["DOM", "DOM.Iterable", "ESNext"],
+        "jsx": "react-jsx",                         /* Specify what JSX code is generated. */
+        /* Modules */
+        "module": "ESNext",
+        "moduleResolution": "node",
+        "resolveJsonModule": true,                  /* Enable importing .json files. */
+        /* Emit */
+        "noEmit": true,                             // Полное выключение компиляции - делегирование Babel | swc | другое
+        /* Type Checking */
+        "noFallthroughCasesInSwitch": true,         /* Enable error reporting for fallthrough cases in switch statements. */
+    },
+}
